@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/dialogTextTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalle Pokémon"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="16dp"/>
+
+        <FrameLayout
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- El Pokémon a atrapar -->
+            <ImageView
+                android:id="@+id/dialogImagePokemon"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal|top"
+                android:contentDescription="Pokémon Image"
+                tools:src="@tools:sample/avatars"/>
+
+            <!-- Rayo de luz de captura (Opcional visual) -->
+            <View
+                android:id="@+id/viewCaptureLight"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_gravity="center_horizontal|top"
+                android:background="#80FF0000"
+                android:visibility="gone"/>
+
+            <!-- Contenedor de la Pokebola Segmentada para poder abrirla -->
+            <RelativeLayout
+                android:id="@+id/layoutPokeballContainer"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/imgPbBottom"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentBottom="true"
+                    android:src="@drawable/ic_pokeball_bottom"
+                    android:contentDescription="Pokebola Abajo"/>
+
+                <ImageView
+                    android:id="@+id/imgPbTop"
+                    android:layout_width="120dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_pokeball_top"
+                    android:contentDescription="Pokebola Arriba"/>
+
+                <ImageView
+                    android:id="@+id/imgPbCenter"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_pokeball_center"
+                    android:contentDescription="Pokebola Centro"/>
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/dialogTextName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre:---"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/dialogTextHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altura:---"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/dialogTextWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Peso:---"
+            android:textSize="18sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/dialogTextTypes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo:---"
+            android:textSize="18sp"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/dialogBtnClose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cerrar"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
